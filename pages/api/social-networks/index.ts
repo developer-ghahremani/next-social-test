@@ -13,9 +13,9 @@ export default function handler(
   const { method } = req;
   console.log(method);
 
-  if (method === "GET") return res.status(200).json(data);
+  if (method === "GET") return res.status(200).json({ name: "test" });
   if (method === "POST") {
     data.push({ fitsrname: "ali", lastname: "ashor" });
-    return res.status(200).json(data);
+    return res.status(200).json({ name: "test" });
   }
 }

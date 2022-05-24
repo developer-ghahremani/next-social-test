@@ -30,7 +30,8 @@ const AddRoute = () => {
           {t("general.communicationRoutes")}
         </p>
       </div>
-      <Collapsable in={expand} className="p-2 mt-4">
+
+      <Collapsable in={expand} className={`p-2 ${expand ? "mt-1" : "!m-0"}`}>
         <p className="text-sm">{t("general.communicationRoutes")}</p>
         <AddOrEditRoute
           initialValues={{ link: "", type: "" }}

@@ -45,7 +45,7 @@ const SocialRoute = (props: Props) => {
           <p>{props.socialRoute.type}</p>
 
           <p className="md:block hidden mx-2">{t("general.link")}:</p>
-          <p style={{ color: theme.color }} className="text-xs">
+          <p style={{ color: theme.color }} className="text-xs font-bold">
             {props.socialRoute.link}
           </p>
         </div>

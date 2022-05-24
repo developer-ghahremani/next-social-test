@@ -32,6 +32,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === "POST") {
     if (!body.type || !body.link)
       return res.status(400).json({ message: "fields not send" });
+    const isExist = data.find(
+      (item) => item.link === body.link && item.type == body.type
+    );
+    if (isExist) return res.status(400).json({ message: "duplicate route" });
     data.push({ id: Math.floor(Math.random() * 1000000), ...body });
     return res.status(200).json(data);
   }

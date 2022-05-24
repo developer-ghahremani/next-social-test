@@ -16,5 +16,6 @@
   "edit": "Edit",
   "delete": "Delete",
   "warningDeleteRoute": "Are you sure to delete {{type}}?",
-  "cancel": "Cancel"
+  "cancel": "Cancel",
+  "type": "Type"
 }

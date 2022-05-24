@@ -1,3 +1,5 @@
+import * as yup from "yup";
+
 import { IButton, IInput, ISelect } from "components/general";
 import { editSocialRoute, postSocialRoute } from "api/socialRout";
 
@@ -17,6 +19,16 @@ const AddOrEditRoute = (props: Props) => {
   const { theme } = useAppSelector((s) => s.settings);
   const { t } = useI18Next();
   const { reload } = useRouter();
+
+  const validationSchem = yup.object().shape({
+    type: yup
+      .string()
+      .required(t("messages.required", { fieldName: t("general.type") })),
+    link: yup
+      .string()
+      .required(t("messages.required", { fieldName: t("general.link") }))
+      .url(t("messages.isUrl", { fieldName: t("general.link") })),
+  });
 
   const handleFinish = (params: { link: string; type: string }) => {
     const handleAdd = async () => {
@@ -42,8 +54,11 @@ const AddOrEditRoute = (props: Props) => {
   };
 
   return (
-    <Formik initialValues={props.initialValues} onSubmit={handleFinish}>
-      {({ handleChange, handleSubmit, values }) => (
+    <Formik
+      initialValues={props.initialValues}
+      onSubmit={handleFinish}
+      validationSchema={validationSchem}>
+      {({ handleChange, handleSubmit, values, errors, touched }) => (
         <form onSubmit={handleSubmit}>
           <div className="md:grid-cols-3 grid grid-cols-1 gap-4 mt-2">
             <div className="w-full col-span-1">
@@ -57,6 +72,9 @@ const AddOrEditRoute = (props: Props) => {
                   { title: "twitterr", value: "twitter" },
                 ]}
               />
+              {touched.type && errors.type && (
+                <p className="text-xs text-red-900">{errors.type}</p>
+              )}
             </div>
             <div className="w-full col-span-2">
               <IInput
@@ -65,7 +83,11 @@ const AddOrEditRoute = (props: Props) => {
                 onChange={handleChange}
                 className="w-full"
                 placeholder={t("general.link")}
+                // style={{ color: "red" }}
               />
+              {touched.link && errors.link && (
+                <p className="text-xs text-red-900">{errors.link}</p>
+              )}
             </div>
           </div>
           <div className="flex justify-end mt-4">

@@ -2,3 +2,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-component {
+  color: inherit !important;
+  font-family: inherit !important;
+}
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  color: inherit !important;
+  font-family: inherit !important;
+}
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  color: inherit !important;
+}
+
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+  color: inherit !important;
+}
+.css-79ws1d-MuiModal-root {
+  //   direction: inherit !important;
+  font-family: Vazir FD;
+}

@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        vazir: ["Vazir FD"],
+        vazir: ["Vazir FD", "sans"],
       },
       colors: {
         dark: "#180A0A",

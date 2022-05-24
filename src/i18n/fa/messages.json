@@ -1,0 +1,4 @@
+{
+  "required": "{{fieldName}} الزامی است.",
+  "isUrl": "{{fieldName}} باید آدرس قابل قبول باشد."
+}

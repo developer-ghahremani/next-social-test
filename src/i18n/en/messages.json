@@ -1,0 +1,4 @@
+{
+  "required": "{{fieldName}} is required.",
+  "isUrl": "{{fieldName}} should be a valid url."
+}

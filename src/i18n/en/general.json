@@ -3,5 +3,11 @@
   "home": "Home",
   "english": "English",
   "farsi": "Farsi",
-  "selectTheme": "Select Theme"
+  "selectTheme": "Select Theme",
+  "tip": "Tip",
+  "projectTip": "The more similar the product implemented by you to the present project, the more value and points it will have",
+  "level": "{{level}} level",
+  "first": "First",
+  "second": "Second",
+  "third": "Third"
 }

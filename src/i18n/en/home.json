@@ -1,0 +1,33 @@
+{
+  "hi": "Hello az home",
+  "hope": "We hope you are always healthy.",
+  "title": "Test subject",
+  "projectSummary": "In summary, building the same project and managing the user's communication paths is in the user settings page.",
+  "testLevels": "This test is designed in three levels, which you will see below",
+  "desc1": "Please select one of the following levels and do it. Finally, send the product of your work on a repository and send us the access link or the project compressed file for review",
+  "testRequirment": "Test requirements",
+  "testLibrary": "Please implement the software structure based on Typescript React and using the Material Ui library.",
+
+  "firstLevelTitle": "According to the requirements mentioned above, just do the user settings page without the multilingual controller and change the theme with the following assumptions",
+  "firstLevelDesc1": "The form for adding and editing a connection should be placed below the Add Route button.",
+  "firstLevelDesc2": "If you click on the edit button, the same add form will open and the contents of the selected line will be displayed.",
+  "firstLevelDesc3": "If the form is open by clicking the cancel button, the contents of the form must be emptied and the form closed.",
+  "firstLevelDesc4": "The Delete Button dialog box does not need to enter the confirmation text.",
+  "firstLevelDesc5": "You do not need to enter the confirmation text and the name of the selected social network dialog box.",
+
+  "secondLevelTitle": "In addition to the requirements mentioned above, please use NextJS to implement the project and a forum management library of your choice to implement the forms, and in addition to the previous level assumptions, please follow the following assumptions as well",
+  "secondLevelDesc1": "Implement the black mode switch button at the top of the screen.",
+  "secondLevelDesc2": "Do not enter duplicate data.",
+  "secondLevelDesc3": "Implement multilingualism in the system.",
+  "secondLevelDesc4": "Use a JSON Server library to implement the communication process with the server, such as receiving a list of communications and adding edits and deleting each item.",
+
+  "thirdLevelTitle": "In addition to the requirements mentioned above, please use NextJS to implement the project and a forum management library of your choice to implement the forms, and in addition to the previous level assumptions, please follow the following assumptions as well.",
+  "thirdLevelDesc1": "Please implement a theme management theme anywhere on the site that you are interested in.",
+  "thirdLevelDesc2": "To implement the server, please use your NextJs api.",
+  "thirdLevelDesc3": "Implement the search process among the list of contacts",
+  "thirdLevelDesc4": "What problems do you see in the above website? What problems do you see in the implementation of this website? Please report them and fix them in your output.",
+
+  "firstLevel": "First level",
+  "secondLevel": "Second level",
+  "thirdLevel": "Third level"
+}

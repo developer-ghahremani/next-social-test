@@ -24,7 +24,7 @@ const MainLayout = (props: Props) => {
       `}>
       <Navbar />
 
-      <div className="relative h-[calc(90vh-4rem)]">
+      <div className="relative min-h-[calc(90vh-4rem)] mt-8">
         <div className="absolute w-full h-[calc(90vh-4rem)]">
           <div
             onClick={handleTggleThemeModal}
@@ -39,7 +39,7 @@ const MainLayout = (props: Props) => {
             <SettingIcon color="white" className="m-2" fontSize={22} />
           </div>
         </div>
-        <div className="lg:mx-auto lg:max-w-3xl bg-theme-2 h-full mx-8">
+        <div className={`lg:mx-auto lg:max-w-3xl h-full mx-8`}>
           {props.children}
         </div>
       </div>

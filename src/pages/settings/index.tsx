@@ -8,8 +8,9 @@ import { getSocialRoute } from "api/socialRout";
 import { useI18Next } from "i18n";
 
 type Props = { socialRoutes: SocialRoute[] };
-const Settings = ({ socialRoutes = [] }: Props) => {
+const Settings = ({ socialRoutes = [], ...props }: Props) => {
   const { t } = useI18Next();
+  console.log(props);
 
   return (
     <MainLayout>
@@ -28,7 +29,7 @@ export const getServerSideProps = async () => {
     };
   } catch (error) {
     return {
-      props: { error: "error occured" },
+      props: { error: "erorr occured" },
     };
   }
 };

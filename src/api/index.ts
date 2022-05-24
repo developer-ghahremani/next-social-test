@@ -2,7 +2,7 @@ import axios from "axios";
 import { showMessage } from "./../utils/message";
 
 // const api = axios.create({ baseURL: "/api" });
-const api = axios.create({ baseURL: "/api" });
+const api = axios.create({ baseURL: "http://localhost:3000/api" });
 
 api.interceptors.response.use(undefined, (error) => {
   if (

@@ -5,6 +5,7 @@ import { editSocialRoute, postSocialRoute } from "api/socialRout";
 
 import { Formik } from "formik";
 import React from "react";
+import { socialNetworks } from "constant";
 import { useAppSelector } from "store";
 import { useI18Next } from "i18n";
 import { useRouter } from "next/router";
@@ -59,18 +60,19 @@ const AddOrEditRoute = (props: Props) => {
       onSubmit={handleFinish}
       validationSchema={validationSchem}>
       {({ handleChange, handleSubmit, values, errors, touched }) => (
-        <form onSubmit={handleSubmit}>
+        <form autoComplete="off" onSubmit={handleSubmit}>
           <div className="md:grid-cols-3 grid grid-cols-1 gap-4 mt-2">
             <div className="w-full col-span-1">
               <ISelect
                 name="type"
                 onChange={handleChange}
                 className="w-full"
+                // placeholder={t("general.link")}
                 value={values.type}
-                options={[
-                  { title: "insta", value: "instagram" },
-                  { title: "twitterr", value: "twitter" },
-                ]}
+                options={socialNetworks.map((item) => ({
+                  ...item,
+                  title: t(`general.${item.title}`),
+                }))}
               />
               {touched.type && errors.type && (
                 <p className="text-xs text-red-900">{errors.type}</p>
@@ -83,7 +85,6 @@ const AddOrEditRoute = (props: Props) => {
                 onChange={handleChange}
                 className="w-full"
                 placeholder={t("general.link")}
-                // style={{ color: "red" }}
               />
               {touched.link && errors.link && (
                 <p className="text-xs text-red-900">{errors.link}</p>

@@ -17,5 +17,9 @@
   "delete": "Delete",
   "warningDeleteRoute": "Are you sure to delete {{type}}?",
   "cancel": "Cancel",
-  "type": "Type"
+  "type": "Type",
+  "instagram": "Instagram",
+  "twitter": "Twitter",
+  "telegram": "Telegram",
+  "facebook": "Facebook"
 }

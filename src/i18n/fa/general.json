@@ -17,5 +17,9 @@
   "delete": "حذف",
   "warningDeleteRoute": "نسبت به حذف مسیر ارتباطی مطمئن هستید؟ ",
   "cancel": "کنسل",
-  "type": "نوع"
+  "type": "نوع",
+  "instagram": "اینستاگرام",
+  "twitter": "توییتر",
+  "telegram": "تلگرام",
+  "facebook": "فیسبوک"
 }

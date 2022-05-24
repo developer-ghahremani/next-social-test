@@ -1,10 +1,10 @@
-import { useAppDispatch, useAppSelector } from "../../../store";
+import { useAppDispatch, useAppSelector } from "store";
 
 import Navbar from "./Navbar";
 import React from "react";
-import { SettingIcon } from "../../icons";
-import { getCurrentLanguage } from "../../../i18n";
-import { toggleThemeModal } from "../../../store/modal";
+import { SettingIcon } from "components/icons";
+import { getCurrentLanguage } from "i18n";
+import { toggleThemeModal } from "store/modal";
 
 type Props = { children: React.ReactNode };
 

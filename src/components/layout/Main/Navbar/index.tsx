@@ -1,8 +1,8 @@
-import i18n, { getCurrentLanguage, useI18Next } from "../../../../i18n";
-import { useAppDispatch, useAppSelector } from "../../../../store";
+import i18n, { getCurrentLanguage, useI18Next } from "i18n";
+import { useAppDispatch, useAppSelector } from "store";
 
 import React from "react";
-import { toggleDarkMode } from "../../../../store/settings";
+import { toggleDarkMode } from "store/settings";
 
 const Navbar = () => {
   const { t } = useI18Next();

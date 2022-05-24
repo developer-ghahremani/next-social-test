@@ -1,7 +1,7 @@
 import { Modal, ModalProps } from "@mui/material";
 
 import React from "react";
-import { useAppSelector } from "../../../store";
+import { useAppSelector } from "store";
 
 interface Props extends ModalProps {}
 

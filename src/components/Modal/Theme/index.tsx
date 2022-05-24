@@ -1,12 +1,11 @@
-import { useAppDispatch, useAppSelector } from "../../../store";
+import { useAppDispatch, useAppSelector } from "store";
 
-import { IModal } from "../../general";
-import Modal from "@mui/material/Modal";
+import { IModal } from "components/general";
 import React from "react";
-import { changeTheme } from "../../../store/settings";
+import { changeTheme } from "store/settings";
 import range from "lodash/range";
-import { toggleThemeModal } from "../../../store/modal";
-import { useI18Next } from "../../../i18n";
+import { toggleThemeModal } from "store/modal";
+import { useI18Next } from "i18n";
 
 const ThemeModal = () => {
   const { t } = useI18Next();

@@ -4,6 +4,7 @@ import "animate.css/animate.css";
 import "i18n";
 
 import type { AppProps } from "next/app";
+import ErrorBoundary from "components/ErrorBundry";
 import { PersistGate } from "redux-persist/integration/react";
 import { Provider } from "react-redux";
 import ThemeModal from "components/Modal/Theme";
@@ -15,13 +16,15 @@ let persistor = persistStore(store);
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
-    <Provider store={store}>
-      <PersistGate persistor={persistor} loading={null}>
-        <Component {...pageProps} />
-        <ToastContainer position="bottom-right" />
-      </PersistGate>
-      <ThemeModal />
-    </Provider>
+    <ErrorBoundary>
+      <Provider store={store}>
+        <PersistGate persistor={persistor} loading={null}>
+          <Component {...pageProps} />
+          <ToastContainer position="bottom-right" />
+        </PersistGate>
+        <ThemeModal />
+      </Provider>
+    </ErrorBoundary>
   );
 };
 

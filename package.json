@@ -15,6 +15,7 @@
     "@reduxjs/toolkit": "^1.8.1",
     "animate.css": "^4.1.1",
     "axios": "^0.27.2",
+    "formik": "^2.2.9",
     "i18next": "^21.8.4",
     "lodash": "^4.17.21",
     "next": "12.1.6",
@@ -24,8 +25,10 @@
     "react-i18next": "^11.16.9",
     "react-icons": "^4.3.1",
     "react-redux": "^8.0.2",
+    "react-toastify": "^9.0.1",
     "redux": "^4.2.0",
-    "redux-persist": "^6.0.0"
+    "redux-persist": "^6.0.0",
+    "tostify": "^0.0.1"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.182",

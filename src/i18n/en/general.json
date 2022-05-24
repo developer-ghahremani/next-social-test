@@ -9,5 +9,12 @@
   "level": "{{level}} level",
   "first": "First",
   "second": "Second",
-  "third": "Third"
+  "third": "Third",
+  "userSettings": "User settings",
+  "communicationRoutes": "Communication routes",
+  "link": "Link",
+  "edit": "Edit",
+  "delete": "Delete",
+  "warningDeleteRoute": "Are you sure to delete {{type}}?",
+  "cancel": "Cancel"
 }

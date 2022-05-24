@@ -1,6 +1,9 @@
+import { MoonIcon, SunIcon } from "components/icons";
 import i18n, { getCurrentLanguage, useI18Next } from "i18n";
 import { useAppDispatch, useAppSelector } from "store";
 
+import Link from "next/link";
+import { Navlink } from "components/general";
 import React from "react";
 import { toggleDarkMode } from "store/settings";
 
@@ -19,8 +22,15 @@ const Navbar = () => {
   };
 
   return (
-    <div className="lg:mx-auto lg:max-w-4xl flex justify-between pt-12 mx-8">
-      <p>{t("general.home")}</p>
+    <div className="lg:mx-auto lg:max-w-4xl flex items-center justify-between pt-12 mx-8">
+      <div className="flex">
+        <Navlink title={t("general.home")} to="/" />
+        <Navlink
+          className="mx-4"
+          title={t("general.userSettings")}
+          to="/settings"
+        />
+      </div>
       <div className="flex items-center">
         <p
           onClick={() => handleChangeLanguage("en")}
@@ -38,9 +48,22 @@ const Navbar = () => {
           }`}>
           {t("general.farsi")}
         </p>
-        <p onClick={handleToggleDarkMode} className="cursor-pointer">
+        <div onClick={handleToggleDarkMode} className="cursor-pointer">
+          {theme.darkMode ? (
+            <SunIcon
+              style={{ color: theme.color }}
+              className="animate__animated animate__heartBeat"
+            />
+          ) : (
+            <MoonIcon
+              style={{ color: theme.color }}
+              className="animate__animated animate__heartBeat"
+            />
+          )}
+        </div>
+        {/* <p >
           {theme.darkMode ? "darkmode" : "lightmode"}
-        </p>
+        </p> */}
       </div>
     </div>
   );

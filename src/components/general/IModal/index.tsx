@@ -5,14 +5,14 @@ import { useAppSelector } from "store";
 
 export interface IModalProps extends ModalProps {}
 
-const IModal = ({ children, ...props }: IModalProps) => {
+const IModal = ({ children, className, ...props }: IModalProps) => {
   const { theme } = useAppSelector((s) => s.settings);
   return (
     <Modal {...props}>
       <div
         className={`absolute top-[40%] md:left-[calc(50%-15rem)] md:w-[30rem] w-[90%] left-[5%] outline-none p-4 ${
           theme.darkMode ? "bg-dark text-white" : "bg-white text-dark"
-        }`}>
+        } ${className}`}>
         {children}
       </div>
     </Modal>

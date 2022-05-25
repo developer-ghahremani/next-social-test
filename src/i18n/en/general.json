@@ -21,5 +21,8 @@
   "instagram": "Instagram",
   "twitter": "Twitter",
   "telegram": "Telegram",
-  "facebook": "Facebook"
+  "facebook": "Facebook",
+  "updateRoute": "Update route",
+  "typeTheSocialNetwork": "Type the social network below",
+  "linkedin": "Linkedin"
 }

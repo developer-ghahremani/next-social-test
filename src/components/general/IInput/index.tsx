@@ -9,7 +9,13 @@ import React from "react";
 interface Props extends StandardTextFieldProps {}
 
 const IInput = (props: Props) => (
-  <TextField classes={{ root: "text-component" }} {...props} />
+  <TextField
+    inputProps={{
+      className: "outline-double outline-1",
+    }}
+    classes={{ root: "text-component" }}
+    {...props}
+  />
 );
 
 export default IInput;

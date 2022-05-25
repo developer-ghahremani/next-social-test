@@ -11,7 +11,11 @@ interface Props extends SelectProps {
 const ISelect = (props: Props) => {
   const currentLanguage = getCurrentLanguage();
   return (
-    <Select {...props}>
+    <Select
+      inputProps={{
+        className: "outline-1 outline-double !rounded-none !font-vazir",
+      }}
+      {...props}>
       {props.options.map((option) => (
         <MenuItem
           style={{

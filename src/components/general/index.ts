@@ -5,3 +5,4 @@ export { default as ISelect } from "./ISelect";
 export { default as IInput } from "./IInput";
 export { default as IButton } from "./IButton";
 export { default as Collapsable } from "./Collapsable";
+export { default as LottieAnim } from "./LottieAnim";

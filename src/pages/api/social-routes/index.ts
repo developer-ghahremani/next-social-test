@@ -5,22 +5,12 @@ let data = [
   {
     id: 1,
     type: "Instagram",
-    link: "https://instagram.com/reza",
+    link: "https://instagram.com/rezaghahremani",
   },
   {
     id: 2,
-    type: "Instagram",
-    link: "https://instagram.com/reza",
-  },
-  {
-    id: 3,
-    type: "Instagram",
-    link: "https://instagram.com/reza",
-  },
-  {
-    id: 4,
-    type: "Instagram",
-    link: "https://instagram.com/reza",
+    type: "Telegram",
+    link: "https://t.me/rezaghahremani",
   },
 ];
 

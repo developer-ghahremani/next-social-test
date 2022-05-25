@@ -21,5 +21,9 @@
   "instagram": "اینستاگرام",
   "twitter": "توییتر",
   "telegram": "تلگرام",
-  "facebook": "فیسبوک"
+  "facebook": "فیسبوک",
+  "addRoute": "افزودن مسیر",
+  "updateRoute": "ویرایش مسیر",
+  "typeTheSocialNetwork": "نوع شبکه اجتماعی را در زیر دارد نمایید",
+  "linkedin": "لینکدین"
 }

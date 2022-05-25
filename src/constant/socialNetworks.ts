@@ -2,7 +2,7 @@ import SelectOptionInterface from "models/SelectOption.model";
 
 const socialNetworks: SelectOptionInterface[] = [
   { title: "instagram", value: "Instagram" },
-  { title: "twitter", value: "Twitter" },
+  { title: "linkedin", value: "Linkedin" },
   { title: "facebook", value: "Facebook" },
   { title: "telegram", value: "Telegram" },
 ];

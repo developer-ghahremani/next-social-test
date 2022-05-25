@@ -26,7 +26,7 @@ const AddRoute = () => {
         />
         <p
           style={{ color: expand ? "#707070" : theme.color }}
-          className="mx-2 text-sm">
+          className="mx-2 text-sm font-bold">
           {t("general.communicationRoutes")}
         </p>
       </div>

@@ -10,7 +10,7 @@ module.exports = {
         vazir: ["Vazir FD", "sans"],
       },
       colors: {
-        dark: "#180A0A",
+        dark: "#222831",
         grayDark: "#707070",
         theme: {
           1: "#E91E63",

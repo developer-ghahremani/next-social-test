@@ -2,11 +2,13 @@ import * as yup from "yup";
 
 import { IButton, IInput, ISelect } from "components/general";
 import { editSocialRoute, postSocialRoute } from "api/socialRout";
+import { useAppDispatch, useAppSelector } from "store";
 
 import { Formik } from "formik";
+import { MdPanoramaPhotosphere } from "react-icons/md";
 import React from "react";
 import { socialNetworks } from "constant";
-import { useAppSelector } from "store";
+import { toggleLoadingModal } from "store/modal";
 import { useI18Next } from "i18n";
 import { useRouter } from "next/router";
 
@@ -14,12 +16,14 @@ type Props = {
   onCancel: () => void;
   initialValues: { type: string; link: string };
   id?: number;
+  className?: string;
 };
 
 const AddOrEditRoute = (props: Props) => {
   const { theme } = useAppSelector((s) => s.settings);
   const { t } = useI18Next();
   const { reload } = useRouter();
+  const dispatch = useAppDispatch();
 
   const validationSchem = yup.object().shape({
     type: yup
@@ -32,6 +36,7 @@ const AddOrEditRoute = (props: Props) => {
   });
 
   const handleFinish = (params: { link: string; type: string }) => {
+    dispatch(toggleLoadingModal());
     const handleAdd = async () => {
       try {
         await postSocialRoute(params);
@@ -60,7 +65,10 @@ const AddOrEditRoute = (props: Props) => {
       onSubmit={handleFinish}
       validationSchema={validationSchem}>
       {({ handleChange, handleSubmit, values, errors, touched }) => (
-        <form autoComplete="off" onSubmit={handleSubmit}>
+        <form
+          className={props.className}
+          autoComplete="off"
+          onSubmit={handleSubmit}>
           <div className="md:grid-cols-3 grid grid-cols-1 gap-4 mt-2">
             <div className="w-full col-span-1">
               <ISelect
@@ -97,13 +105,13 @@ const AddOrEditRoute = (props: Props) => {
               className="mx-2 text-xs border"
               onClick={props.onCancel}
               style={{ borderColor: theme.color, color: theme.color }}>
-              انصراف
+              {t("general.cancel")}
             </IButton>
             <IButton
               type="submit"
               className="text-xs text-white"
               style={{ backgroundColor: theme.color }}>
-              ثبت گزارش
+              {t(`general.${props.id ? "updateRoute" : "addRoute"}`)}
             </IButton>
           </div>
         </form>

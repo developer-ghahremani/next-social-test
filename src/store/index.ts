@@ -24,13 +24,14 @@ const persistedReducer = persistReducer(
   {
     key: "root",
     storage,
+    blacklist: [modal.name],
   },
   reducer
 );
 
 const store = configureStore({
   reducer: persistedReducer,
-  // reducer,
+  devTools: process.env.NODE_ENV === "development",
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {

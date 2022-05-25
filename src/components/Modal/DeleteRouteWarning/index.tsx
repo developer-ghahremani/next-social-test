@@ -14,8 +14,8 @@ interface Props {
 
 const DeleteRouteWarningModal = (props: Props) => {
   const [verifyText, setVerifyText] = useState<string>("");
-  const { t } = useI18Next();
   const { theme } = useAppSelector((s) => s.settings);
+  const { t } = useI18Next();
 
   const onChangeVerifyText = (text: string) => {
     setVerifyText(text);
@@ -27,6 +27,8 @@ const DeleteRouteWarningModal = (props: Props) => {
         <p>
           {t("general.warningDeleteRoute", { type: props.socialRoute.type })}
         </p>
+        <p>{t("general.typeTheSocialNetwork")}</p>
+        <strong>{props.socialRoute.type}</strong>
         <IInput
           value={verifyText}
           className="w-full !mt-4 "
@@ -38,6 +40,7 @@ const DeleteRouteWarningModal = (props: Props) => {
           <IButton
             style={{
               borderColor: theme.color,
+              color: theme.color,
             }}
             className={`border mx-2 `}
             onClick={props.onClose}>
@@ -47,11 +50,13 @@ const DeleteRouteWarningModal = (props: Props) => {
             onClick={props.onDelete}
             style={{
               backgroundColor:
-                verifyText === "success" ? theme.color : "inherit",
+                verifyText === props.socialRoute.type ? theme.color : "inherit",
             }}
-            disabled={verifyText !== "success"}
+            disabled={verifyText !== props.socialRoute.type}
             className={`border mx-2 ${
-              verifyText === "success" ? "text-white font-bold" : "text-inherit"
+              verifyText === props.socialRoute.type
+                ? "text-white font-bold"
+                : "text-inherit"
             }`}>
             {t("general.delete")}
           </IButton>

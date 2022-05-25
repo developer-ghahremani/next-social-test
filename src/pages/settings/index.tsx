@@ -1,10 +1,12 @@
 import React, { useEffect, useReducer, useState } from "react";
-import { settingInitialState, settingReducer } from "./reducer";
+import {
+  settingInitialState,
+  settingReducer,
+} from "../../reducers/settingsReducer";
 
 import AddRoute from "components/AddRoute";
 import ILoading from "components/ILoading";
 import { MainLayout } from "components/layout";
-import SocialRoute from "models/SocialRoute.model";
 import SocialRoutes from "components/SocialRoutes";
 import { getSocialRoute } from "api/socialRout";
 import { useI18Next } from "i18n";
